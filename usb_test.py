@@ -25,10 +25,9 @@ h.setTimeouts(1000,1000)
 
 class Application(Frame):
 	def read_byte(self):
-		h.purge()
-		bytes_waiting = h.getQueueStatus()
-		data = h.read(5)
-		print ord(data)
+		bytes_waiting = h.getQueueStatus()	# get the number of bytes waiting in FIFO
+		data = h.read(bytes_waiting)		# read that many bytes
+		print ord(data[0])					# print the first one
 		print bytes_waiting
 
 
@@ -61,13 +60,6 @@ root.destroy()
 
 # write a byte
 h.write(chr(4))
-'''
-# read some bytes
-bytes_waiting = h.getQueueStatus()
-print bytes_waiting
-data = h.read(bytes_waiting)
-print ord(data[0])
-'''
 
 # close device
 h.close()
