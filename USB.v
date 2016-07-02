@@ -52,8 +52,6 @@ assign GPIO[20] = oe ? write_data[5] : 8'bZ;
 assign GPIO[22] = oe ? write_data[6] : 8'bZ;
 assign GPIO[24] = oe ? write_data[7] : 8'bZ;
 
-
-
 //finite state machine for reading and writing
 always @(posedge read_flag)
 	begin

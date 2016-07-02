@@ -41,3 +41,15 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# =====================
+# Quartus project files
+# =====================
+
+*.txt
+*.qpf
+*.qsf
+*.bak
+db/
+incremental_db/
+output_files/
