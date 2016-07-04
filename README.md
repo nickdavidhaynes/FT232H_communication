@@ -4,10 +4,11 @@ This repo contains everything you need to get started sending data between an FP
 
 ## Getting started (Windows)
 
-1. Install the FT D2XX drivers 
+### Install the FT D2XX drivers
+
 These drivers allow your operating system to communicate with the USB chip. Download the most current file from http://www.ftdichip.com/Drivers/D2XX.htm and run the .exe. To verify drivers are successfully installed, plug the USB chip into your computer and navigate to Control Panel -> Device Manager. Expand the 'Universal Serial Bus controllers' tree. 'USB Serial Converter' should be listed. Double click it, and navigate to the Details tab. Select 'Bus reported device description' from the pull-down menu. The value field should say 'UM232HB'. If not, something is wrong.
 
-2. Download the Python wrapper to D2XX
+### Download the Python wrapper to D2XX
 Unfortunately, FTDI does not provide an official library for interacting with the D2XX driver from Python. Instead, we'll use a wrapper.
 
 First, make sure that the computer you're using is running Python 2.7.x (if you're a Python pro, 3.x should be fine as well). From the console, running
@@ -24,7 +25,7 @@ Finally, we can download and install the D2XX wrapper by running
 
 from the console. You should see some text printed to the screen, with a message telling you that the installation was successful.
 
-3. Configure the chip
+### Configure the chip
 Note that this step is only necessary the first time you use a brand-new chip.
 
 One of the nice things about the FT232H chips is that they are capable of operating with a number of different I/O protocols (see http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232H.pdf for more details). The protocol we use here is called asynch 245 FIFO. By default, a brand-new chip will not be configured for asynch 245 FIFO, but we can use the free FT Prog utility to reconfigure it.
@@ -33,17 +34,17 @@ Download FT Prog from http://www.ftdichip.com/Support/Utilities.htm and run the 
 
 ## Getting started (OS X/MacOS and Linux)
 
-1. Install the FT D2XX drivers 
+### Install the FT D2XX drivers 
 These drivers allow your operating system to communicate with the USB chip. Download the most current file from http://www.ftdichip.com/Drivers/D2XX.htm.
 
-2. Download the Python wrapper to D2XX
+### Download the Python wrapper to D2XX
 Unfortunately, FTDI does not provide an official library for interacting with the D2XX driver from Python. Instead, we'll use a wrapper.
 
 First, make sure that the computer you're using is running Python 2.7.x (if you're a Python pro, 3.x should be fine as well). From the terminal, running
 
 `python --version`
 
-will print the default version of Python. If you're on 2.6 or lower, consider upgrading
+will print the default version of Python. If you're on 2.6 or lower, consider upgrading.
 
 If you don't already have pip installed (running `which pip` doesn't print anything), follow the instructions here to get it - https://pip.pypa.io/en/stable/installing/.
 
@@ -53,7 +54,7 @@ Finally, we can download and install the D2XX wrapper by running
 
 from the console. You should see some text printed to the screen, with a message telling you that the installation was successful.
 
-3. Configure the chip
+### Configure the chip
 Note that this step is only necessary the first time you use a brand-new chip.
 
 One of the nice things about the FT232H chips is that they are capable of operating with a number of different I/O protocols (see http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232H.pdf for more details). The protocol we use here is called asynch 245 FIFO. By default, a brand-new chip will not be configured for asynch 245 FIFO, but we can use the free FT Prog utility to reconfigure it.
